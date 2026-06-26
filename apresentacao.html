@@ -516,16 +516,16 @@
 
         .trust-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-top: 30px;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
 
         .trust-item {
             background: #FFFFFF;
             border-radius: 12px;
-            padding: 28px 24px;
+            padding: 24px 20px;
             text-align: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
@@ -539,25 +539,62 @@
         }
 
         .trust-icon {
-            font-size: 2rem;
-            margin-bottom: 14px;
+            font-size: 3rem;
+            margin-bottom: 10px;
             display: block;
         }
 
         .trust-item h3 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .trust-item p {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.4;
+        }
+
+        .seals-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .seal-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #E0E0E0;
+        }
+
+        .seal-item .seal-icon {
+            font-size: 1.6rem;
+        }
+
+        .seal-item .seal-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .seal-item .seal-text strong {
+            display: block;
+            color: var(--text-dark);
+            font-size: 0.8rem;
         }
 
         .testimonials {
@@ -848,19 +885,33 @@
                 max-height: 250px;
             }
 
-            .solution-grid,
-            .trust-grid {
+            .solution-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
             .testimonials {
                 grid-template-columns: 1fr;
             }
+
+            .seal-item {
+                padding: 10px 14px;
+            }
         }
 
         @media (max-width: 768px) {
             .slide {
-                padding: 30px 20px;
+                padding: 20px 16px;
+            }
+
+            .slide-content {
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
+            }
+
+            .pest-slide .slide-content {
+                max-height: calc(100vh - 60px);
+                padding-top: 40px;
+                padding-bottom: 40px;
             }
 
             .cover-logo {
@@ -888,17 +939,94 @@
             }
 
             .pest-image-container {
-                max-height: 200px;
+                max-height: 180px;
+            }
+
+            .pest-info-card {
+                padding: 18px;
+            }
+
+            .pest-info-card h3 {
+                font-size: 0.9rem;
+            }
+
+            .pest-info-card p,
+            .pest-info-card ul {
+                font-size: 0.85rem;
+            }
+
+            .pest-characteristics {
+                padding: 18px;
+            }
+
+            .pest-characteristics p {
+                font-size: 0.85rem;
+            }
+
+            .trigger-box {
+                padding: 16px 20px;
+            }
+
+            .trigger-box p {
+                font-size: 0.85rem;
+            }
+
+            .trust-item {
+                padding: 18px 16px;
+            }
+
+            .trust-icon {
+                font-size: 2.2rem;
+            }
+
+            .seals-row {
+                gap: 12px;
+            }
+
+            .seal-item {
+                padding: 8px 12px;
+                gap: 6px;
+            }
+
+            .seal-item .seal-icon {
+                font-size: 1.2rem;
+            }
+
+            .seal-item .seal-text {
+                font-size: 0.7rem;
             }
         }
 
         @media (max-width: 480px) {
             .slide-title {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
+            }
+
+            .slide-subtitle {
+                font-size: 0.9rem;
             }
 
             .cover-logo {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+
+            .cover-slogan {
+                font-size: 0.9rem;
+                padding: 12px 20px;
+            }
+
+            .pest-info-card {
+                padding: 14px;
+            }
+
+            .pest-grid {
+                gap: 12px;
+                margin-top: 16px;
+            }
+
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 0.85rem;
             }
         }
 
@@ -1053,7 +1181,7 @@
                             <p>Tratamento químico direcionado em ralos, caixas de gordura e pontos estratégicos de entrada.</p>
                         </div>
                         <div class="trigger-box animate delay-5">
-                            <p>Uma barata visível indica uma colônia ativa. Não ignore o sinal.</p>
+                            <p>Colônias ativas no esgoto se expandem para cozinhas e banheiros em busca de alimento.</p>
                         </div>
                     </div>
                     <div class="pest-image-container animate zoom delay-3">
@@ -1102,7 +1230,7 @@
                             </ul>
                         </div>
                         <div class="trigger-box animate delay-5">
-                            <p>Uma barata visível indica uma infestação ativa. Intervenção profissional é essencial.</p>
+                            <p>Resistente a inseticidas de mercado. Só o tratamento profissional elimina a colônia.</p>
                         </div>
                     </div>
                     <div class="pest-image-container animate zoom delay-3">
@@ -1181,7 +1309,7 @@
                             </ul>
                         </div>
                         <div class="trigger-box animate delay-4">
-                            <p>Seus sinais de presença (excrementos, urina, marcas) indicam uma infestação ativa.</p>
+                            <p>Roedores causam danos estruturais e são a principal fonte de leptospirose urbana.</p>
                         </div>
                     </div>
                     <div class="pest-image-container animate zoom delay-3">
@@ -1267,25 +1395,49 @@
                 <h2 class="slide-title animate delay-1">Por que escolher a <span class="highlight">Grupo Praga Zero?</span></h2>
 
                 <div class="trust-grid">
-                    <div class="trust-item animate delay-3">
+                    <div class="trust-item animate delay-2">
                         <span class="trust-icon">👨‍🔧</span>
                         <h3>Equipe Certificada</h3>
-                        <p>Profissionais com formação em entomologia e controle de vetores.</p>
-                    </div>
-                    <div class="trust-item animate delay-4">
-                        <span class="trust-icon">🛡️</span>
-                        <h3>Produtos Homologados</h3>
-                        <p>Inseticidas registrados no MAPA — seguros para famílias e pets.</p>
+                        <p>Formação em entomologia e controle de vetores.</p>
                     </div>
                     <div class="trust-item animate delay-3">
-                        <span class="trust-icon">📋</span>
-                        <h3>Garantia de Resultado</h3>
-                        <p>Se o problema persistir, retornamos sem custo adicional.</p>
+                        <span class="trust-icon">🛡️</span>
+                        <h3>Produtos Homologados</h3>
+                        <p>Registrados no MAPA — seguros para famílias e pets.</p>
                     </div>
                     <div class="trust-item animate delay-4">
+                        <span class="trust-icon">📋</span>
+                        <h3>Garantia de Resultado</h3>
+                        <p>Retorno sem custo se o problema persistir.</p>
+                    </div>
+                    <div class="trust-item animate delay-5">
                         <span class="trust-icon">⚡</span>
                         <h3>Atendimento Emergencial</h3>
-                        <p>Equipe pronta para atender situações de risco imediato.</p>
+                        <p>Equipe de prontidão para riscos imediatos.</p>
+                    </div>
+                </div>
+
+                <div class="seals-row animate delay-4">
+                    <div class="seal-item">
+                        <span class="seal-icon">📜</span>
+                        <div class="seal-text">
+                            <strong>Registro MAPA</strong>
+                            Inseticidas autorizados
+                        </div>
+                    </div>
+                    <div class="seal-item">
+                        <span class="seal-icon">🔬</span>
+                        <div class="seal-text">
+                            <strong>CRBio</strong>
+                            Responsabilidade técnica
+                        </div>
+                    </div>
+                    <div class="seal-item">
+                        <span class="seal-icon">♻️</span>
+                        <div class="seal-text">
+                            <strong>Controle Integrado</strong>
+                            Método IPM recomendado
+                        </div>
                     </div>
                 </div>
 
